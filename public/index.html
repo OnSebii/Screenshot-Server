@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Better Awesome Fruits App :)</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div id="app" class="container">
+      <div class="row">
+        <div class="col-8 offset-2 bg-info text-white mt-4">
+          <p class="mt-2">ID: {{id}}</p>
+          <h3>Enter your data</h3>
+          <div class="form-group w-50">
+            <label for="name">Name:</label>
+            <input id="name" v-model="name" type="text" class="form-control" />
+          </div>
+
+          <div class="form-group">
+            <label for="image">Image:</label>
+            <input id="image" v-model="image" type="text" class="form-control" />
+          </div>
+          <div class="d-flex">
+            <div class="form-group w-25 mr-5">
+              <label for="image">price:</label>
+              <input id="price" v-model.number="price" type="text" class="form-control" />
+            </div>
+            <div class="form-group w-25">
+              <label for="soldby">Sold by:</label>
+              <select v-model="soldBy" id="soldby" type="text" class="form-control">
+                <option>Hofer</option>
+                <option>Lidl</option>
+                <option>Merkur</option>
+                <option>Spar</option>
+              </select>
+            </div>
+          </div>
+          <button @click="updateFruit" class="btn btn-light mb-3">Update</button>
+        </div>
+      </div>
+
+      <table class="table table-bordered mt-4">
+        <thead class="bg-info text-white">
+          <th>Name</th>
+          <th>Image</th>
+          <th>Price</th>
+          <th>Sold by</th>
+        </thead>
+        <tbody>
+          <tr v-for="f of fruits">
+
+            <td>{{f.name}}</td>
+            <td @click="copyData(f)"><img :src="f.image" height="100px"/></td>
+            <td>{{f.price}}</td>
+            <td>{{f.soldBy}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="./js/vue.js"></script>
+    <script src="./js/axios.min.js"></script>
+    <script src="./js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+GET http://127.0.0.1:3000/fruits
+###
+GET http://127.0.0.1:3000/fruits/3
+###
+GET http://127.0.0.1:3000/fruits/31
+###
+DELETE http://127.0.0.1:3000/fruits/3
+###
+DELETE http://127.0.0.1:3000/fruits
+###
+GET http://127.0.0.1:3000/fruits?soldBy=Merkur
+###
+GET http://127.0.0.1:3000/fruits?priceLT=4
+###
+GET http://127.0.0.1:3000/fruits/3
+###
+POST http://127.0.0.1:3000/fruits
+content-type: application/json
+
+{
+	"fruit": {
+		"name": "KIWI",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Kiwi_aka.jpg/220px-Kiwi_aka.jpg",
+		"weight": 0.1,
+		"price": 1.51,
+		"soldBy": "Hofer"
+	}
+}
+###
+PUT http://127.0.0.1:3000/fruits/3
+content-type: application/json
+
+{
+	"fruit": {
+		"name": "Test",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Single_Orange_%28Fruit%29.jpg/800px-Single_Orange_%28Fruit%29.jpg",
+		"weight": 0.4,
+		"price": 1.51,
+		"soldBy": "Merkur"
+	}
+}
+###
+Patch http://127.0.0.1:3000/fruits/1
+content-type: application/json
+
+{
+	"fruit": {
+		"name": "Apple",
+		"image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Single_Orange_%28Fruit%29.jpg/800px-Single_Orange_%28Fruit%29.jpg",
+		"weight": 0.4,
+		"price": 3.5,
+		"soldBy": "Lidl2"
+	}
+}

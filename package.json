@@ -1,0 +1,30 @@
+{
+  "name": "screenshot-server",
+  "version": "1.0.0",
+  "description": "Screenshot server backend",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "prod": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OnSebii/Screenshot-Server.git"
+  },
+  "author": "OnSebii",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OnSebii/Screenshot-Server/issues"
+  },
+  "homepage": "https://github.com/OnSebii/Screenshot-Server#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "helmet": "^4.2.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
