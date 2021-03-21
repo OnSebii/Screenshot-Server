@@ -6,7 +6,7 @@ const { uploadImage } = require('../model/functions');
 router.post(
   '/upload/',
   asyncHandler(async (req, res) => {
-    const result = await uploadImage(req.query.key, req);
+    const result = await uploadImage(req.query.key, req.body);
     res.status(result.code).json(result);
   }),
 );
