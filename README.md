@@ -9,6 +9,7 @@ To setup your own screenshot server follow the next steps below:
 ```
 git clone https://github.com/OnSebii/Screenshot-Server My-Screenshot-Server
 cd My-Screenshot-Server
+npm i
 npm run start
 ```
 
