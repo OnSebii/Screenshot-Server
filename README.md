@@ -55,9 +55,9 @@ Edit **shareXConfig_Example.sxcu** with your own data.
 }
 ```
 
-**Name** is your config name.
+**Name** is your config name. Recognizable later in ShareX under **custom uploader settings**.
 
-**RequestURL** if your IP adress or domain.name.
+**RequestURL** is your IP adress or domain name.
 
 **key** is your private key. With this key you can grant access to your screenshot server. **Need to be the same key as in your config.json file**
 
