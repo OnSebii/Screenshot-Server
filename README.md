@@ -59,3 +59,7 @@ Edit **shareXConfig_Example.sxcu** with your own data.
 **RequestURL** if your IP adress or domain.name.
 
 **key** is your private key. With this key you can grant access to your screenshot server. **Need to be the same key as in your config.json file**
+
+### shareXConfig_Localhost.sxcu
+
+This is a ShareX config for developers to test their program.
