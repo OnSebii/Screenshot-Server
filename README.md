@@ -29,8 +29,11 @@ Rename **config_example.json** to **config.json**!
 ```
 
 **urllenght** is the length of letters of your file what will be saved on the server side
+
 **chars** is a sequence of letters or numbers under which the uploaded file wil be saved
+
 **path** if you want to save your files in a different path than the default one (/uploads). Leave it blank if you want to use /uploads as your path.
+
 **apikey** is required if you only want to give certain people access to your screenshot server. You will need to edit **shareXConfig_Example.sxcu** also.
 
 ## Create and load your ShareX config
@@ -52,5 +55,7 @@ Edit **shareXConfig_Example.sxcu** with your own data.
 ```
 
 **Name** is your config name.
+
 **RequestURL** if your IP adress or domain.name.
+
 **key** is your private key. With this key you can grant access to your screenshot server. **Need to be the same key as in your config.json file**
