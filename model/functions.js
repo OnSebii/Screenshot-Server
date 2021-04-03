@@ -33,7 +33,7 @@ function generateRandomString() {
 
   const charactersLength = characters.length;
   let urllength = config.urllength;
-  if (urllength > 3) urllength = 3;
+  if (urllength < 3) urllength = 3;
   for (var i = 0; i < urllength; i++) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
   }
