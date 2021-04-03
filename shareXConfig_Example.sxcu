@@ -1,0 +1,9 @@
+{
+  "Name": "Localhost",
+  "DestinationType": "ImageUploader, TextUploader, FileUploader", 
+  "RequestURL": "localhost:3000/upload",
+  "FileFormName": "sharex",
+  "Headers": {
+    "key": "123"
+  }
+}
