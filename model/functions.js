@@ -1,6 +1,5 @@
 const config = require('../config.json');
 const path = require('path');
-const sh = require('shortid');
 const fs = require('fs');
 
 async function uploadImage(req) {
