@@ -14,13 +14,23 @@ async function uploadImage(req) {
   let fileName = `${generateRandomString()}.${fileExtension}`;
   let path2save = path.join(__dirname, '../', 'uploads', fileName);
   if (config.path) {
-    if (!fs.existsSync(config.path)) return { code: 404, data: 'Path does not exist' };
+    if (!fs.existsSync(config.path)) return { code: 404, data: 'Path does not exist. Create your path from the config.json file on the server.' };
     path2save = path.join(config.path, fileName);
   }
   file.mv(path2save, function (err) {
     if (err) return { code: 500, data: err };
   });
   return { code: 200, data: fileName };
+}
+
+async function getImage(id) {
+  if (config.path) {
+    const imgLocation = path.join(config.path, id);
+    return { code: 200, data: imgLocation };
+  } else {
+    const imgLocation = path.join(__dirname, '../', 'uploads', id);
+    return { code: 200, data: imgLocation };
+  }
 }
 
 function generateRandomString() {
@@ -44,4 +54,4 @@ function getExtension(fileName) {
   return ext[ext.length - 1];
 }
 
-module.exports = { uploadImage };
+module.exports = { uploadImage, getImage };
