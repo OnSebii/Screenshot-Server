@@ -1,0 +1,1 @@
+screen -S img node ./app.js
